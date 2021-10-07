@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json());
 
-// Permit access to TASK 09 from other Servers (Server 03)
 app.get("/instock/:id", async (req, res, next) => {
     var id = req.params.id;
     var result;
@@ -19,7 +18,6 @@ app.get("/instock/:id", async (req, res, next) => {
     next();
 });
 
-// Permit access to TASK 03 from other Servers (Server 03)
 app.get("/totalprice", (req, res, next) => {
     var data = req.body;
     var result;
@@ -34,7 +32,6 @@ app.get("/totalprice", (req, res, next) => {
     next();
 })
 
-// Permit access to TASK 01.03 from other Servers (Server 03)
 app.get("/cartproducts", async (req, res, next) => {
     var data = req.body;
     var result;
@@ -49,7 +46,6 @@ app.get("/cartproducts", async (req, res, next) => {
     next();
 });
 
-// Permit access to TASK 01.07 from other Servers (Server 03)
 app.put("/update", async (req, res, next) => {
     var data = req.body;
     var result
@@ -64,7 +60,6 @@ app.put("/update", async (req, res, next) => {
     next();
 });
 
-// Permit access to TASK 01.01 from other Srevers (Server 03)
 app.get("/product/:id", async (req, res, next) => {
     var id = req.params.id;
     try {
